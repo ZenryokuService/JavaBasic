@@ -16,6 +16,23 @@ package yoshida.tkm.sukiri2.rpg.check;
 public class CheckerUtils {
 
 	/**
+	 * 入力値が数字かどうか判定する
+	 * 
+	 * @param input 入力文字列
+	 * @return 数字の入力の場合はtrue
+	 */
+	public static boolean isNumber(String input, String low, String high, boolean isRequired) {
+		boolean isNumber = false;
+
+		if (isRequired && isEmpty(input)) {
+			return false;
+		}
+		if (input.matches("[0-9]{" + low + "," + high + "}")) {
+			isNumber = true;
+		}
+		return isNumber;
+	}
+	/**
 	 * 入力文字列が"1"か"2"であればtrue
 	 * @param input 入力文字列
 	 * @return 入力文字列が"1"か"2"であればtrue

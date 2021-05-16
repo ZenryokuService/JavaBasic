@@ -59,4 +59,16 @@ public class CheckerUtilsTest {
 		
 		assertEquals(false, CheckerUtils.isFixRange(8, 4, 7, false));
 	}
+
+	@Test
+	public void testIsNumber() {
+		assertEquals(true, CheckerUtils.isNumber("12", "2", "4", true));
+		assertEquals(true, CheckerUtils.isNumber("12", "2", "4", false));
+
+		assertEquals(true, CheckerUtils.isNumber("1234", "2", "4", true));
+		assertEquals(true, CheckerUtils.isNumber("1234", "2", "4", false));
+
+		assertEquals(false, CheckerUtils.isNumber("12345", "2", "4", true));
+		assertEquals(false, CheckerUtils.isNumber("12345", "2", "4", false));
+	}
 }

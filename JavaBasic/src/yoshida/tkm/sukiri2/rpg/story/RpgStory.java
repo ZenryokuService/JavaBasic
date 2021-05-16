@@ -36,18 +36,7 @@ public class RpgStory {
 
 	public void secondScene(RpgHero hero) {
 		System.out.println(KING + "おお！" + hero.getName() + "というのか、予言の通りぢゃ!");
-	}
-	/**
-	 * 勇者の作成を行う
-	 */
-	public  RpgHero createHero(Scanner scan) {
-		// 名前の作成
-		String name = RpgUtils.createName(scan);
-		int sex = RpgUtils.createSex(scan);
-		int age = RpgUtils.createAge(scan);
-		Date birthDay = RpgUtils.createBirthDay(scan);
-
-		 return new RpgHero(name, sex, age, birthDay);
+		RpgUtils.showStatus(hero);
 	}
 
 	

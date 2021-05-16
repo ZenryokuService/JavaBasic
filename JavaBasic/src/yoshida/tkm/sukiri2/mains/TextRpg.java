@@ -5,6 +5,7 @@ import java.util.Scanner;
 import yoshida.tkm.sukiri1.frw.CommandIF;
 import yoshida.tkm.sukiri2.rpg.player.RpgHero;
 import yoshida.tkm.sukiri2.rpg.story.RpgStory;
+import yoshida.tkm.sukiri2.rpg.util.RpgUtils;
 
 
 
@@ -20,6 +21,7 @@ public class TextRpg implements CommandIF {
 	private RpgStory story;
 
 	public TextRpg() {
+		System.setProperty("file.encoding", "UTF-8");
 		scan = new Scanner(System.in);
 		story = new RpgStory();
 	}
@@ -31,7 +33,7 @@ public class TextRpg implements CommandIF {
 		story.firstScene();
 
 		// 勇者の作成
-		RpgHero hero = story.createHero(scan);
+		RpgHero hero = RpgUtils.createHero(scan);
 		// 勇者の作成後
 		story.secondScene(hero);
 	}
