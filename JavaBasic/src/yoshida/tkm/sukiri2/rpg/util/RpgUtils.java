@@ -61,6 +61,9 @@ public class RpgUtils {
 			String input = scan.nextLine();
 			if (input.matches("[0-9]{0,3}")) {
 				age = Integer.parseInt(input);
+				if (age > 120) {
+					continue;
+				}
 				break;
 			}
 			scan.reset();
