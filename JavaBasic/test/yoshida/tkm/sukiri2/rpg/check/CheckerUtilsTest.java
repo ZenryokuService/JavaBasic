@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2019-present ProconServerRPG JavaFX Library All rights reserved.
- * 
+ *
  * Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
@@ -8,7 +8,7 @@
  */
 package yoshida.tkm.sukiri2.rpg.check;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -56,7 +56,7 @@ public class CheckerUtilsTest {
 
 		assertEquals(true, CheckerUtils.isFixRange(7, 4, 7, true));
 		assertEquals(false, CheckerUtils.isFixRange(7, 4, 7, false));
-		
+
 		assertEquals(false, CheckerUtils.isFixRange(8, 4, 7, false));
 	}
 
@@ -70,5 +70,11 @@ public class CheckerUtilsTest {
 
 		assertEquals(false, CheckerUtils.isNumber("12345", "2", "4", true));
 		assertEquals(false, CheckerUtils.isNumber("12345", "2", "4", false));
+	}
+
+	@Test
+	public void testIsEqual(String strA, String strB) {
+		assertEquals(true, CheckerUtils.isEqual("test", "test"));
+		assertEquals(false, CheckerUtils.isEqual("test", "tist"));
 	}
 }
