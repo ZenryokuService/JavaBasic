@@ -11,7 +11,7 @@ import java.util.Properties;
 import java.util.Scanner;
 
 
-public class SuperMain {
+public  class SuperMain {
 	/** デバック時にtrue */
 	private static final boolean isDebug = true;
 	/** CommandIFを実装したクラスを保持 */
