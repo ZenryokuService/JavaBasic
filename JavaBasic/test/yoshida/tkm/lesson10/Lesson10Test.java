@@ -10,7 +10,7 @@ public class Lesson10Test /*extends SuperMain*/ {
 		SuperHero sh = new SuperHero("タイガー");
 		sh.run();
 		System.out.println("==========");
-		Hero hero = new Hero();
+		Hero hero = new Hero("aaa");
 		hero.run();
 	}
 }

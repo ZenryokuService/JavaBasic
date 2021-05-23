@@ -3,7 +3,7 @@ package yoshida.tkm.lesson10;
 /**
  * 【継承の書き方】
  * アクセス修飾子 class クラス名 extends クラス名 { ... }
- * 
+ *
  * @author 作成者の名前
  * 2021/05/19
  */
@@ -14,8 +14,7 @@ public class SuperHero extends Hero {
 	/** コンストラクタ */
 	public SuperHero(String name) {
 		// 親クラスのコンストラクタ
-		super();
-		super.setName(name);
+		super(name);
 		// newしたときに呼び出される
 		System.out.println("*** SuperHero コンストラクタ " + getName() + "***");
 	}
@@ -36,7 +35,7 @@ public class SuperHero extends Hero {
 	}
 
 	@Override
-	public void attack(Matango m) {
+	public void attack(Monster m) {
 		super.attack(m);
 //		System.out.println(this.name + "の攻撃");
 //		m.hp -= 5;

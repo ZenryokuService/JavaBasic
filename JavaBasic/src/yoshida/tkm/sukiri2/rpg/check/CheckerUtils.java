@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2019-present ProconServerRPG JavaFX Library All rights reserved.
- * 
+ *
  * Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
@@ -17,7 +17,7 @@ public class CheckerUtils {
 
 	/**
 	 * 入力値が数字かどうか判定する
-	 * 
+	 *
 	 * @param input 入力文字列
 	 * @return 数字の入力の場合はtrue
 	 */
@@ -82,7 +82,7 @@ public class CheckerUtils {
 	}
 	/**
 	 * 入力がnullまたはから文字の場合にtrueを返す
-	 * 
+	 *
 	 * @param input 入力文字列
 	 * @return 入力がnullまたはから文字の場合にtrueを返す
 	 */
@@ -91,5 +91,9 @@ public class CheckerUtils {
 			return true;
 		}
 		return false;
+	}
+
+	public static boolean isEquals(String left, String right) {
+		return left.equals(right);
 	}
 }
