@@ -4,7 +4,7 @@ package yoshida.tkm;
  * クラスの書き方
  * 1. クラスがプログラムを動かすための基準になります。
  * 2. クラスの中にかけるもの(クラスが持てるもの)
- * 
+ *
  * クラス：初めの文字を大文字
  * メソッド：初めの文字を小文字
  * @author 作成者の名前
@@ -13,25 +13,29 @@ package yoshida.tkm;
 public class Sample {
 	/** フィールド変数 */
 	private int field_int = 0;
-	private String field_String = "もじれる";
+	private String field_String = "もじれつ";
 	//////// 注意(教科書の書き方はほぼ使わない) /////
 	// String package_String = "使わない";
 
 	/**
 	 * ＜コンストラクタの書き方＞
 	 * アクセス修飾子 クラス名(引数) { ... }
-	 * 
+	 *
 	 * newした時の処理を書く
 	 */
 	public Sample() {
 		this.field_int = 5;
-		this.field_String = "aaaa時の値";	
+		this.field_String = "aaaa時の値";
 	}
 
-	/** オーバーロード */
+	/**
+	 * コンストラクタのオーバーロード
+	 * @param num
+	 * @param str
+	 */
 	public Sample(int num, String str) {
 		this.field_int = num;
-		this.field_String = str;	
+		this.field_String = str;
 	}
 
 	/**
@@ -53,7 +57,7 @@ public class Sample {
 	/**
 	 * @return the field_int
 	 */
-	// キャメルケース
+	// キャメルケースで書きましょう
 	public int getField_int() {
 		return field_int;
 	}
@@ -108,9 +112,10 @@ public class Sample {
 //		return 0;
 //	}
 
+	/** メインメソッド */
 	public static void main(String[] args) {
-
-		
+		Sample thisClass = new Sample();
+		thisClass.hello();
 	}
 
 	/** スタティックメソッド */

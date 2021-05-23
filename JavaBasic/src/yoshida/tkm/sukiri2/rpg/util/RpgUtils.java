@@ -1,6 +1,6 @@
 /**
  * Copyright (c) 2019-present ProconServerRPG JavaFX Library All rights reserved.
- * 
+ *
  * Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
  * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
  * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
@@ -8,6 +8,8 @@
  */
 package yoshida.tkm.sukiri2.rpg.util;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
@@ -15,7 +17,7 @@ import yoshida.tkm.sukiri2.rpg.check.CheckerUtils;
 import yoshida.tkm.sukiri2.rpg.player.RpgHero;
 
 /**
- * 
+ *
  * @author 作成者の名前
  */
 public class RpgUtils {
@@ -98,4 +100,24 @@ public class RpgUtils {
 		System.out.println("性別: " + (hero.getSex() == 1 ? "男" : "女"));
 		System.out.println("誕生日: " + hero.getBirthDay());
 	}
+
+	public static String dateToString(Date date) {
+		SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
+		return format.format(date);
+	}
+
+	public static Date dateToString(String date) {
+		SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
+		Date result = null;
+
+		try {
+			result = format.parse(date);
+		} catch (ParseException e) {
+			// TODO 自動生成された catch ブロック
+			e.printStackTrace();
+		}
+
+		return result;
+	}
+
 }

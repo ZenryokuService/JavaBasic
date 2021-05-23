@@ -10,6 +10,8 @@ package yoshida.tkm.sukiri2.rpg.player;
 
 import java.util.Date;
 
+import yoshida.tkm.sukiri2.rpg.util.RpgUtils;
+
 /**
  *
  * 2021/05/15
@@ -24,7 +26,7 @@ public class RpgHero {
 		this.name = name;
 		this.sex = sex;
 		this.age = age;
-		this.birthDay = birthDay;
+		this.birthDay = RpgUtils.dateToString(birthDay);
 	}
 	/**
 	 * @return the name
