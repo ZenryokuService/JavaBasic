@@ -5,14 +5,14 @@ package yoshida.tkm.lesson10;
  * @author 作成者の名前
  * 2021/05/19
  */
-public abstract class Character {
+public  class Character {
 	// java.lang.Character;
 	private String name;
 	private int hp;
 	private int mp;
 
-	/** 抽象メソッド */
-	public abstract void attack(Matango m);
+//	/** 抽象メソッド */
+//	public abstract void attack(Matango m);
 
 	/**
 	 * @return the name
