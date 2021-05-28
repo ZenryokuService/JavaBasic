@@ -1,5 +1,6 @@
 package yoshida.tkm.lesson10;
 
+
 /**
  *
  * @author 作成者の名前
@@ -7,13 +8,24 @@ package yoshida.tkm.lesson10;
  */
 public  class Character {
 	// java.lang.Character;
-	private String name;
-	private int hp;
+	protected String name;
+	protected int hp;
 	private int mp;
 
+<<<<<<< HEAD
 //	/** 抽象メソッド */
 //	public abstract void attack(Matango m);
+=======
+	public Character(String name) {
+		this.name = name;
+	}
+	/** 抽象メソッド */
+	public abstract void attack(Monster m);
+>>>>>>> 3dd3ee111010291f6b22230603982c472f2e9481
 
+	public String toString() {
+		return this.name + ": " + this.hp;
+	}
 	/**
 	 * @return the name
 	 */

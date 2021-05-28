@@ -93,10 +93,15 @@ public class CheckerUtils {
 		return false;
 	}
 
+<<<<<<< HEAD
 	public static boolean isEqual(String strA, String strB) {
 		if (strA == null || strB == null) {
 			return false;
 		}
 		return strA.equals(strB);
+=======
+	public static boolean isEquals(String left, String right) {
+		return left.equals(right);
+>>>>>>> 3dd3ee111010291f6b22230603982c472f2e9481
 	}
 }

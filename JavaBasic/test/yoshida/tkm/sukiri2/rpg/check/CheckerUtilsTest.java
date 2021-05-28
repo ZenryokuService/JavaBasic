@@ -74,7 +74,7 @@ public class CheckerUtilsTest {
 
 	@Test
 	public void testIsEqual(String strA, String strB) {
-		assertEquals(true, CheckerUtils.isEqual("test", "test"));
-		assertEquals(false, CheckerUtils.isEqual("test", "tist"));
+		assertEquals(true, CheckerUtils.isEquals("test", "test"));
+		assertEquals(false, CheckerUtils.isEquals("test", "tist"));
 	}
 }
