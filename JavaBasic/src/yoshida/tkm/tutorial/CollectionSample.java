@@ -7,6 +7,7 @@ import java.util.Set;
 public class CollectionSample {
 	public static void main(String[] args) {
 		ArrayList<String> list = new ArrayList<String>();
+		// リストにデータを追加する
 		list.add("aaa");
 		list.add("bbb");
 		list.add("ccc");
@@ -14,6 +15,7 @@ public class CollectionSample {
 		System.out.println("*** List ***");
 		printValue(list);
 
+		// 文字列型の配列を上と同じように作る
 		String[] arr = new String[] {"aaa", "bbb", "ccc"};
 
 		System.out.println("*** String[] ***");
@@ -31,6 +33,8 @@ public class CollectionSample {
 		System.out.println("*** HashMap ***");
 		printValue(map);
 
+		System.out.println("mapのkey2: " + map.get("key2"));
+
 		System.out.println("*** ClearMap ***");
 		map.clear();
 		printValue(map);
@@ -42,14 +46,14 @@ public class CollectionSample {
 			System.out.println(value);
 		}
 	}
-	public static void printValue(String[] arr) {
-		for (String value : arr) {
-			System.out.println(value);
-		}
-	}
 	public static void printValue(HashMap map) {
 		Set<String> set = map.keySet();
 		for (String value : set) {
+			System.out.println(value);
+		}
+	}
+	public static void printValue(String[] arr) {
+		for (String value : arr) {
 			System.out.println(value);
 		}
 	}
