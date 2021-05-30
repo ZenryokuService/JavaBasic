@@ -7,10 +7,10 @@ package yoshida.tkm.lesson10;
  */
 public class Lesson10Test /*extends SuperMain*/ {
 	public static void main(String[] args) {
-		SuperHero sh = new SuperHero("タイガー");
-		sh.run();
-		System.out.println("==========");
-		Hero hero = new Hero("aaa");
-		hero.run();
+//		SuperHero sh = new SuperHero("タイガー");
+//		sh.run();
+//		System.out.println("==========");
+//		Hero hero = new Hero("aaa");
+//		hero.run();
 	}
 }
