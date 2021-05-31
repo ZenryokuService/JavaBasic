@@ -1,12 +1,13 @@
 package yoshida.tkm.lesson10;
 
-
 /**
  *
  * @author 作成者の名前
  * 2021/05/19
  */
-public abstract class Character {
+public abstract class Character /* exends Object */ {
+	final String TEAM = "TTT";
+	int hh;
 	// java.lang.Character;
 	protected String name;
 	protected int hp;

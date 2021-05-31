@@ -10,6 +10,10 @@ package yoshida.tkm.sample;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 import org.junit.Test;
 
 /**
@@ -26,6 +30,40 @@ public class StringTest {
 	
 		assertEquals(false, test.equals("aab"));
 		assertEquals(true, test.equals("aaa"));
+		assertEquals("AAA", test.toUpperCase());
+		assertEquals("testa", "TEstA".toLowerCase());
+		assertEquals(1, "Tesea".indexOf("e"));
+		assertEquals(0, "Tesea".indexOf("T"));
+		assertEquals(1, "Takashimaya".indexOf("a"));
+		assertEquals(3, "Tesea".lastIndexOf("e"));
+		assertEquals(10, "Takashimaya".lastIndexOf("a"));
+		assertEquals(true, "Takashimaya".contains("aya"));
+		assertEquals(true, "Takashimaya".contains("shim"));
+		assertEquals(false, "Takashimaya".contains("Aya"));
+
+		assertEquals("abc", "abcdefg".substring(0, 3));
+		assertEquals("efg", "abcdefg".substring(4));
+		assertEquals("defg", "abcdefg".substring(3, 7));
+		
+		assertEquals("abc", " abc ".trim());
+		assertEquals("ab c", " ab c ".trim());
+
+		assertEquals("abあda", "abcda".replace("c", "あ"));
+		assertEquals("あbcdあ", "abcda".replace("a", "あ"));
+
+		assertEquals("ああああABCD", "abcdABCD".replaceAll("[a-z]", "あ"));
+		assertEquals("ああああ1234ああああ", "abcd1234ABCD".replaceAll("[a-zA-Z]", "あ"));
+		
+		assertEquals("abcdああああABCD", "abcd1234ABCD".replaceAll("[0-9]", "あ"));
+		assertEquals("abcdああああABCD", "abcd0123ABCD".replaceAll("[0-9]", "あ"));
+
+		SimpleDateFormat format = new SimpleDateFormat("yyyy/MM/dd");
+		try {
+			Date date = format.parse("2021/05/27");
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	@Test

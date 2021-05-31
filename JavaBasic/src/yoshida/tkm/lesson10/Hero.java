@@ -1,6 +1,5 @@
 package yoshida.tkm.lesson10;
 
-
 /**
  *
  * @author 作成者の名前
@@ -16,15 +15,19 @@ public class Hero extends Character {
 	public Hero(String name) {
 		super(name);
 		super.hp = 10;
+		String aa = this.TEAM;
+		// 直接フィールドにアクセスするのは、セキュリティ的にアウト
+		super.hh = 0;
+		super.setHp(10);
 		// newしたときに呼び出される
 		System.out.println("*** Hero コンストラクタ ***");
 	}
 
-//	public void attack(Matango m) {
-//		System.out.println(getName() + "の攻撃");
-//		m.setHp(m.getHp() - 5);
-//		System.out.println("5ポイントのダメージをあたえた！");
-//	}
+	public void attack(Matango m) {
+		System.out.println(getName() + "の攻撃");
+		m.setHp(m.getHp() - 5);
+		System.out.println("5ポイントのダメージをあたえた！");
+	}
 
 	/** 逃げる */
 	public void run() {
@@ -36,6 +39,5 @@ public class Hero extends Character {
 	public void attack(Monster m) {
 		System.out.println(getName() + "の攻撃");
 		System.out.println(m.getName()+ "に3ポイントのダメージ");
-
 	}
 }
