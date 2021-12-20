@@ -3,8 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>ご当地検索エンジン</title>
-  <link href="./bootstrap-5.0.0-beta1-dist/css/bootstrap.min.css" rel="stylesheet"/>
-<!--  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Google Youtbe -->
@@ -32,57 +31,57 @@
     <div class="col-2">
       <!-- 都道府県一覧 -->
       <select id="todohukenList">
-        <option data-todohu="hokkaido" value="https://www.pref.hokkaido.lg.jp/">北海道</option>
-        <option data-todohu="aomori" value="https://www.pref.aomori.lg.jp/">青森県</option>
-        <option data-todohu="iwate" value="https://www.pref.iwate.jp/">岩手県</option>
-        <option data-todohu="miyagi" value="https://www.pref.miyagi.jp/">宮城県</option>
-        <option data-todohu="akita" value="https://www.pref.akita.lg.jp/">秋田県</option>
-        <option data-todohu="yamagata" value="https://www.pref.yamagata.jp/">山形県</option>
-        <option data-todohu="fukushima" value="https://www.pref.fukushima.lg.jp/">福島県</option>
-        <option data-todohu="ibaraki" value="https://www.pref.ibaraki.jp/">茨城県</option>
-        <option data-todohu="tochigi" value="https://www.pref.tochigi.lg.jp/">栃木県</option>
-        <option data-todohu="gunma" value="https://www.pref.gunma.jp/">群馬県</option>
-        <option data-todohu="saitama" value="https://www.pref.saitama.lg.jp/">埼玉県</option>
-        <option data-todohu="chiba" value="https://www.pref.chiba.lg.jp/">千葉県</option>
-        <option data-todohu="tokyo" value="https://www.metro.tokyo.lg.jp/">東京都</option>
-        <option data-todohu="kanagawa" value="https://www.pref.kanagawa.jp/">神奈川県</option>
-        <option data-todohu="niigata" value="https://www.pref.niigata.lg.jp/">新潟県</option>
-        <option data-todohu="toyama" value="https://www.pref.toyama.jp/">富山県</option>
-        <option data-todohu="ishikawa" value="https://www.pref.ishikawa.lg.jp/">石川県</option>
-        <option data-todohu="fukui" value="https://www.pref.fukui.lg.jp/">福井県</option>
-        <option data-todohu="yanashi" value="https://www.pref.yamanashi.jp/">山梨県</option>
-        <option data-todohu="nagano" value="https://www.pref.nagano.lg.jp/">長野県</option>
-        <option data-todohu="gifu" value="https://www.pref.gifu.lg.jp/">岐阜県</option>
-        <option data-todohu="shizuoka" value="https://www.pref.shizuoka.jp/">静岡県</option>
-        <option data-todohu="aichi" value="https://www.pref.aichi.jp/">愛知県</option>
-        <option data-todohu="mie" value="https://www.pref.mie.lg.jp/">三重県</option>
-        <option data-todohu="shiga" value="https://www.pref.shiga.lg.jp/">滋賀県</option>
-        <option data-todohu="kyoto" value="https://www.pref.kyoto.jp/">京都府</option>
-        <option data-todohu="osaka" value="https://www.pref.osaka.lg.jp/">大阪府</option>
-        <option data-todohu="hyogo" value="https://web.pref.hyogo.lg.jp/">兵庫県</option>
-        <option data-todohu="nara" value="https://www.pref.nara.jp/">奈良県</option>
-        <option data-todohu="wakayama" value="https://www.pref.wakayama.lg.jp/">和歌山県</option>
-        <option data-todohu="tottori" value="https://www.pref.tottori.lg.jp/">鳥取県</option>
-        <option data-todohu="shimane" value="https://www.pref.shimane.lg.jp/">島根県</option>
-        <option data-todohu="okayama" value="https://www.pref.okayama.jp/">岡山県</option>
-        <option data-todohu="hiroshima" value="https://www.pref.hiroshima.lg.jp/">広島県</option>
-        <option data-todohu="yamaguchi" value="https://www.pref.yamaguchi.lg.jp/">山口県</option>
-        <option data-todohu="tokushima" value="https://www.pref.tokushima.lg.jp/">徳島県</option>
-        <option data-todohu="kagawa" value="https://www.pref.kagawa.lg.jp/">香川県</option>
-        <option data-todohu="ehime" value="https://www.pref.ehime.jp/">愛媛県</option>
-        <option data-todohu="kochi" value="https://www.pref.kochi.lg.jp/">高知県</option>
-        <option data-todohu="fukuoka" value="https://www.pref.fukuoka.lg.jp/">福岡県</option>
-        <option data-todohu="saga" value="https://www.pref.saga.lg.jp/">佐賀県</option>
-        <option data-todohu="nagasaki" value="https://www.pref.nagasaki.jp/">長崎県</option>
-        <option data-todohu="kumamoto" value="https://www.pref.kumamoto.jp/">熊本県</option>
-        <option data-todohu="oita" value="https://www.pref.oita.jp/">大分県</option>
-        <option data-todohu="miyazaki" value="https://www.pref.miyazaki.lg.jp/">宮崎県</option>
-        <option data-todohu="kagoshima" value="https://www.pref.kagoshima.jp/">鹿児島県</option>
-        <option data-todohu="okinawa" value="https://www.pref.okinawa.lg.jp/">沖縄県</option>
+        <option data-todohu="hokkaido" data-color1="#b8860b" value="https://www.pref.hokkaido.lg.jp/">北海道</option>
+        <option data-todohu="aomori" data-color1="#008000" value="https://www.pref.aomori.lg.jp/">青森県</option>
+        <option data-todohu="iwate" data-color1="#7fff00" value="https://www.pref.iwate.jp/">岩手県</option>
+        <option data-todohu="miyagi" data-color1="#008000" value="https://www.pref.miyagi.jp/">宮城県</option>
+        <option data-todohu="akita" data-color1="#008000" value="https://www.pref.akita.lg.jp/">秋田県</option>
+        <option data-todohu="yamagata" data-color1="#008000" value="https://www.pref.yamagata.jp/">山形県</option>
+        <option data-todohu="fukushima" data-color1="#808080" value="https://www.pref.fukushima.lg.jp/">福島県</option>
+        <option data-todohu="ibaraki" data-color1="#b8860b" value="https://www.pref.ibaraki.jp/">茨城県</option>
+        <option data-todohu="tochigi" data-color1="#7fff00" value="https://www.pref.tochigi.lg.jp/">栃木県</option>
+        <option data-todohu="gunma" data-color1="#008000" value="https://www.pref.gunma.jp/">群馬県</option>
+        <option data-todohu="saitama" data-color1="#00bfff" value="https://www.pref.saitama.lg.jp/">埼玉県</option>
+        <option data-todohu="chiba" data-color1="#7fff00" value="https://www.pref.chiba.lg.jp/">千葉県</option>
+        <option data-todohu="tokyo" data-color1="#33322f" value="https://www.metro.tokyo.lg.jp/">東京都</option>
+        <option data-todohu="kanagawa" data-color1="#ff4500" value="https://www.pref.kanagawa.jp/">神奈川県</option>
+        <option data-todohu="niigata" data-color1="#808080" value="https://www.pref.niigata.lg.jp/">新潟県</option>
+        <option data-todohu="toyama" data-color1="#808080" value="https://www.pref.toyama.jp/">富山県</option>
+        <option data-todohu="ishikawa" data-color1="#ffffff" value="https://www.pref.ishikawa.lg.jp/">石川県</option>
+        <option data-todohu="fukui" data-color1="#808080" value="https://www.pref.fukui.lg.jp/">福井県</option>
+        <option data-todohu="yanashi" data-color1="#7fff00" value="https://www.pref.yamanashi.jp/">山梨県</option>
+        <option data-todohu="nagano" data-color1="#800080" value="https://www.pref.nagano.lg.jp/">長野県</option>
+        <option data-todohu="gifu" data-color1="#008000" value="https://www.pref.gifu.lg.jp/">岐阜県</option>
+        <option data-todohu="shizuoka" data-color1="#ff4500" value="https://www.pref.shizuoka.jp/">静岡県</option>
+        <option data-todohu="aichi" data-color1="#ff4500" value="https://www.pref.aichi.jp/">愛知県</option>
+        <option data-todohu="mie" data-color1="#ffff00" value="https://www.pref.mie.lg.jp/">三重県</option>
+        <option data-todohu="shiga" data-color1="#ffffff" value="https://www.pref.shiga.lg.jp/">滋賀県</option>
+        <option data-todohu="kyoto" data-color1="#008000" value="https://www.pref.kyoto.jp/">京都府</option>
+        <option data-todohu="osaka" data-color1="#ff4500" value="https://www.pref.osaka.lg.jp/">大阪府</option>
+        <option data-todohu="hyogo" data-color1="#a0522d" value="https://web.pref.hyogo.lg.jp/">兵庫県</option>
+        <option data-todohu="nara" data-color1="#008000" value="https://www.pref.nara.jp/">奈良県</option>
+        <option data-todohu="wakayama" data-color1="#afeeee" value="https://www.pref.wakayama.lg.jp/">和歌山県</option>
+        <option data-todohu="tottori" data-color1="#b8860b" value="https://www.pref.tottori.lg.jp/">鳥取県</option>
+        <option data-todohu="shimane" data-color1="#808080" value="https://www.pref.shimane.lg.jp/">島根県</option>
+        <option data-todohu="okayama" data-color1="#b8860b" value="https://www.pref.okayama.jp/">岡山県</option>
+        <option data-todohu="hiroshima" data-color1="#ff0000" value="https://www.pref.hiroshima.lg.jp/">広島県</option>
+        <option data-todohu="yamaguchi" data-color1="#ffff00" value="https://www.pref.yamaguchi.lg.jp/">山口県</option>
+        <option data-todohu="tokushima" data-color1="#808080" value="https://www.pref.tokushima.lg.jp/">徳島県</option>
+        <option data-todohu="kagawa" data-color1="#a0522d" value="https://www.pref.kagawa.lg.jp/">香川県</option>
+        <option data-todohu="ehime" data-color1="#ff4500" value="https://www.pref.ehime.jp/">愛媛県</option>
+        <option data-todohu="kochi" data-color1="#ffff00" value="https://www.pref.kochi.lg.jp/">高知県</option>
+        <option data-todohu="fukuoka" data-color1="" value="https://www.pref.fukuoka.lg.jp/">福岡県</option>
+        <option data-todohu="saga" data-color1="#ffc0cb" value="https://www.pref.saga.lg.jp/">佐賀県</option>
+        <option data-todohu="nagasaki" data-color1="#800080" value="https://www.pref.nagasaki.jp/">長崎県</option>
+        <option data-todohu="kumamoto" data-color1="#ff0000" value="https://www.pref.kumamoto.jp/">熊本県</option>
+        <option data-todohu="oita" data-color1="#7fff00" value="https://www.pref.oita.jp/">大分県</option>
+        <option data-todohu="miyazaki" data-color1="#7fff00" value="https://www.pref.miyazaki.lg.jp/">宮崎県</option>
+        <option data-todohu="kagoshima" data-color1="#800080" value="https://www.pref.kagoshima.jp/">鹿児島県</option>
+        <option data-todohu="okinawa" data-color1="#afeeee" value="https://www.pref.okinawa.lg.jp/">沖縄県</option>
       </select>
     </div>
     <div class="col-8 text-center">
-      <p id="targetTodohu">北海道</p>
+      <p id="targetTodohu"><a href="https://www.pref.hokkaido.lg.jp/">北海道</a></p>
     </div>
     <div class="col-2">
       <select id="shityoson">
