@@ -11,9 +11,14 @@ function selectLv1() {
       let target = document.getElementById("targetTodohu");
 
       if (todohuIdx === 'tokyo') {
-	      target.innerHTML = '<a class="link-danger" href="' + todohuObj.value + '"> ' + todohuObj.text + '</a>';
+	      target.innerHTML = '<a class="link-danger font-monospace" href="' + todohuObj.value + '"> ' + todohuObj.text + '</a>';
+      } else if (todohuIdx === 'yamagata' || todohuIdx === 'miyagi' || todohuIdx === 'akita'
+      			|| todohuIdx === 'gunma' || todohuIdx === 'gifu' || todohuIdx === 'kyoto' || todohuIdx === 'nara') {
+	      target.innerHTML = '<a class="link-warning font-monospace" href="' + todohuObj.value + '"> ' + todohuObj.text + '</a>';
+      } else if (todohuIdx === 'nagano' || todohuIdx === 'nagasaki' || todohuIdx === 'kagoshima') {
+	      target.innerHTML = '<a class="link-info font-monospace" href="' + todohuObj.value + '"> ' + todohuObj.text + '</a>';
       } else {
-	      target.innerHTML = '<a class="link-dark" href="' + todohuObj.value + '"> ' + todohuObj.text + '</a>';
+	      target.innerHTML = '<a class="link-dark font-monospace" href="' + todohuObj.value + '"> ' + todohuObj.text + '</a>';
       }
       target.style.backgroundColor = todohuObj.dataset.color1;
 
@@ -33,6 +38,13 @@ function selectLv1() {
         option.value = targetSityosons[i][1];
         shityoson.appendChild(option);
       }
+
+      // 先頭の市町村を追加する
+      if (todohuIdx === 'ishikawa') {
+	      target.innerHTML = target.innerHTML + " : <span style='color: black;'>" + targetSityosons[0][0] + "</span>";
+      } else {
+	      target.innerHTML = target.innerHTML + " : <span style='color: white;'>" + targetSityosons[0][0] + "</span>";
+	  }
     });
 }
 
@@ -55,7 +67,7 @@ function search() {
 /** 北海道の市町村
 	0: 都道府県名
 	1: 公式ページURL
-	2: イメージからコード
+	2: イメージかカラーコード
  */
 const HOKKAIDO = [
     ["札幌市", "https://www.city.sapporo.jp/", ""],
