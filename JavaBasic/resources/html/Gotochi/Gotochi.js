@@ -7,7 +7,16 @@ function selectLv1() {
       // 選択した都道府県をタイトルにセット
       let todohuObj = event.srcElement[event.srcElement.selectedIndex];
       let todohuIdx = todohuObj.dataset.todohu;
-      document.getElementById("targetTodohu").innerHTML = '<a href="' + todohuObj.value + '"> ' + todohuObj.text + '</a>';
+
+      let target = document.getElementById("targetTodohu");
+
+      if (todohuIdx === 'tokyo') {
+	      target.innerHTML = '<a class="link-danger" href="' + todohuObj.value + '"> ' + todohuObj.text + '</a>';
+      } else {
+	      target.innerHTML = '<a class="link-dark" href="' + todohuObj.value + '"> ' + todohuObj.text + '</a>';
+      }
+      target.style.backgroundColor = todohuObj.dataset.color1;
+
 
       // セレクトボックスを初期化する
       let shityoson = document.getElementById("shityoson");
