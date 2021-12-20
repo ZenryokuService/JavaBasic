@@ -1,3 +1,4 @@
+/** 都道府県のセレクトボックスを変更したとき */
 function selectLv1() {
     // SELECTボックスの取得
     let selectbox = document.getElementById("todohukenList");
@@ -46,6 +47,12 @@ function selectLv1() {
 	      target.innerHTML = target.innerHTML + " : <span style='color: white;'>" + targetSityosons[0][0] + "</span>";
 	  }
     });
+}
+
+/** 市町村のセレクトボックスを変更したとき */
+function selectLv2() {
+	let seleBox = document.getElementById("shityoson");
+
 }
 
 function search() {
